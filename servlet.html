@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration</title>
+</head>
+<body>
+    <h2>Course Registration Form</h2>
+    <form action="CourseRegistrationServlet" method="post">
+        <table>
+            <tr>
+                <td>Student Name:</td>
+                <td><input type="text" name="studentName" required></td>
+            </tr>
+            <tr>
+                <td>Roll No:</td>
+                <td><input type="text" name="rollNo" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" required> Male
+                    <input type="radio" name="gender" value="Female" required> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Year:</td>
+                <td>
+                    <select name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1st">1st</option>
+                        <option value="2nd">2nd</option>
+                        <option value="3rd">3rd</option>
+                        <option value="4th">4th</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Department:</td>
+                <td>
+                    <select name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">MECH</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Section:</td>
+                <td>
+                    <select name="section" required>
+                        <option value="">Select Section</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile No:</td>
+                <td><input type="text" name="mobileNo" required></td>
+            </tr>
+            <tr>
+                <td>E-Mail ID:</td>
+                <td><input type="email" name="emailId" required></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" required></textarea></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" name="city" required></td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td><input type="text" name="country" required></td>
+            </tr>
+            <tr>
+                <td>Pincode:</td>
+                <td><input type="text" name="pincode" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
