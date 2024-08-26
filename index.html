@@ -1,34 +1,22 @@
-<!-- Book Form -->
-<form id="bookForm" onsubmit="return validateBookForm()">
-  <label for="bookName">Book Name:</label>
-  <input type="text" id="bookName" name="bookName"><br><br>
-  <label for="author">Author:</label>
-  <input type="text" id="author" name="author"><br><br>
-  <label for="publisher">Publisher:</label>
-  <input type="text" id="publisher" name="publisher"><br><br>
-  <label for="edition">Edition:</label>
-  <input type="number" id="edition" name="edition"><br><br>
-  <label for="price">Price:</label>
-  <input type="number" id="price" name="price"><br><br>
-  <label for="category">Category:</label>
-  <select id="category" name="category">
-    <option value="">Select Category</option>
-    <option value="Programming">Programming</option>
-    <option value="Fiction">Fiction</option>
-    <option value="Non-Fiction">Non-Fiction</option>
-  </select><br><br>
-  <input type="submit" value="Submit">
-</form>
-
-<!-- Update Book Form -->
-<form id="updateBookForm" onsubmit="return validateUpdateBookForm()">
-  <label for="bookName">Book Name:</label>
-  <input type="text" id="bookName" name="bookName"><br><br>
-  <label for="author">Author:</label>
-  <input type="text" id="author" name="author"><br><br>
-  <label for="publisher">Publisher:</label>
-  <input type="text" id="publisher" name="publisher"><br><br>
-  <label for="edition">Edition:</label>
-  <input type="number" id="edition" name="edition"><br><br>
-  <label for="price">Price:</label>
-  <input type="number" id="price" name="price"><br><br
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XMLHttpRequest Example</title>
+  <script>
+    function loadXMLDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("myDiv").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "rec.txt", true);
+      xhttp.send();
+    }
+  </script>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <button onclick="loadXMLDoc()">Load Data</button>
+</body>
+</html>
