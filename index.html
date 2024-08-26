@@ -1,22 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>XMLHttpRequest Example</title>
-  <script>
-    function loadXMLDoc() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("myDiv").innerHTML = this.responseText;
-        }
-      };
-      xhttp.open("GET", "rec.txt", true);
-      xhttp.send();
+  <title>Course Registration Form</title>
+  <style>
+    .error {
+      color: red;
     }
-  </script>
+  </style>
 </head>
 <body>
-  <div id="myDiv"></div>
-  <button onclick="loadXMLDoc()">Load Data</button>
-</body>
-</html>
+  <form id="registrationForm" method="post" action="#" onsubmit="return validateForm()">
+    <h2>Course Registration Form</h2>
+    <table>
+      <tr>
+        <td>Student Name:</td>
+        <td><input type="text" id="studentName" name="studentName" size="30" maxlength="50"><span id="studentNameError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td>Roll No:</td>
+        <td><input type="text" id="rollNo" name="rollNo" size="10" maxlength="10"><span id="rollNoError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" id="male" name="gender" value="Male"> Male
+          <input type="radio" id="female" name="gender" value="Female"> Female
+          <span id="genderError" class="error"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Year:</td>
+        <td>
+          <select id="year" name="year">
+            <option value="">Select Year</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2nd Year">2nd Year</option>
+            <option value="3rd Year">3rd Year</option>
+            <option value="4th Year">4th Year</option>
+          </select>
+          <span id="yearError" class="error"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Department:</td>
+        <td>
+          <select id="department" name="department">
+            <option value="">Select Department</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+          </select>
+          <span id="departmentError" class="error"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Section:</td>
+        <td>
+          <select id="section" name="section">
+            <option value="">Select Section</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <span id="sectionError" class="error"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Mobile No:</td>
+        <td><input type="text" id="mobileNo" name="mobileNo" size="10" maxlength="10"><span id="mobileNoError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td>E-Mail ID:</td>
+        <td><input type="email" id="email" name="email" size="30" maxlength="50"><span id="emailError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><textarea id="address" name="address" rows="4" cols="36"></textarea><span id="addressError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td>City:</td>
+        <td><input type="text" id="city" name="city" size="20" maxlength="20"><span id="cityError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td>Country:</td>
+        <td><input type="text" id="country" name="country" size="20" maxlength="20"><span id="countryError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td>Pincode:</td>
+        <td><input type="text" id="pincode" name="pincode" size="6" maxlength="6"><span id="pincodeError" class="error"></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Submit Your Entries">
+          <input type="reset" value="Clear Your Entries">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+   
